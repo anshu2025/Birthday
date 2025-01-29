@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year</title>
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background:linear-gradient(to right,rgb(91, 244, 147),rgb(117, 65, 248));
+}
+h2{
+    margin-top: 155px;
+    color: #322dc6;
+}
+.container {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+#greeting {
+    font-size: 36px;
+    font-weight: bold;
+    color: #a0ea15;
+}
+
+#name {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #eb2222;
+}
+
+#submit {
+    padding: 10px 12px;
+    font-size: 19px;
+    background-color: #d8441b;
+    color: #c0f416;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #2617b0;
+}
+</style>
+<body>
+    <div class="container">
+        <h2>Happy Birthday! <br>Enter your Name for surprise</h2>
+        <h1 id="greeting"></h1>
+        <input type="text" id="name" placeholder="Enter your name">
+        <button id="submit">Submit</button>
+    </div>
+</body>
+
+<script>
+const greetingElement = document.getElementById('greeting');
+const nameInput = document.getElementById('name');
+const submitButton = document.getElementById('submit');
+
+submitButton.addEventListener('click', () => {
+    const userName = nameInput.value.trim();
+    if (userName) {
+        greetingElement.textContent = `Happy Birthday , ${userName}!`;
+    } else {
+        greetingElement.textContent = 'Please enter your name!';
+    }
+});
+</script>
+</html>
