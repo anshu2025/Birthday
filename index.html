@@ -64,6 +64,7 @@ submitButton.addEventListener('click', () => {
     const userName = nameInput.value.trim();
     if (userName) {
         greetingElement.textContent = `Happy Birthday , ${userName}!`;
+        document.querySelector('h2').innerHTML="";
     } else {
         greetingElement.textContent = 'Please enter your name!';
     }
